@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'site_port'
 ]
 
 MIDDLEWARE = [
@@ -37,7 +38,7 @@ ROOT_URLCONF = 'port_new.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templats')],
+        'DIRS': [os.path.join(BASE_DIR, '<nome_pasta_das_templates>')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
