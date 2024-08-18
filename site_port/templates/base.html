@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <title>PÁGINA BASE</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'variaveis.css' %}">
     <link rel="stylesheet" href="{% static 'style_base.css' %}">
+    <link rel="stylesheet" href="{% static 'style_components/header.css' %}">
 </head>
 <body>
+{% include "components/header.html" %}
+
 <main class="container">
     {% block conteudo %}
     {% endblock conteudo %}
