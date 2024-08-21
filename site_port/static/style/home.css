@@ -1,0 +1,8 @@
+.home_inicio {
+    display: flex;
+    background: blue;
+}
+
+.home_inicio img {
+    width: 30%;
+}
