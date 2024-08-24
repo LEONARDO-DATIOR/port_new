@@ -6,20 +6,49 @@
         align-items: center;
         gap: 5em;
     }
+
+    #video_container {
+        overflow: hidden;
+        height: 0;
+        opacity: 0;
+        transition: height 0.5s ease, opacity 0.5s ease;
+    }
+
+    #video_container.open {
+        height: 415px; 
+        width: 720px;
+        opacity: 1;
+    }
+
+
 </style>
 
 <section class="apresentacao">
     <button class="button_apresentacao">Veja apresentação</button>
-    <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/g1Flr67phOA?si=rM3-Xz1D_9kAje9W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div id="video_container">
+        <iframe id="video_apresentacao" width="720" height="415" src="https://www.youtube.com/embed/g1Flr67phOA?si=rM3-Xz1D_9kAje9W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </section>
 
 <script>
     const button_apresentacao = document.getElementsByClassName('button_apresentacao')[0];
-    
+    const video_apresentacao = document.getElementById('video_apresentacao')
+
     // Adiciona o event listener para o clique
-    button_apresentacao.addEventListener('click', () => {
-        console.log('TESTE');
+    button_apresentacao.addEventListener('click', function() {
+        if (video_container.classList.contains('open')) {
+            video_container.classList.remove('open');
+            setTimeout(() => {
+                video_container.style.display = 'none';
+            }, 500); // Tempo de transição
+            button_apresentacao.textContent = 'Veja apresentação';
+        } else {
+            video_container.style.display = 'block';
+            // Pequeno atraso para garantir que o display:block tenha efeito antes da animação
+            setTimeout(() => {
+                video_container.classList.add('open');
+            }, 10);
+            button_apresentacao.textContent = 'Esconder vídeo';
+        }
     });
 </script>
