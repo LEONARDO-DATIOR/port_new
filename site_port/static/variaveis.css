@@ -2,5 +2,16 @@
     --cor-destaque-primaria: #1f8cd4;
     --cor-branca: #FFFFFF;
     --cor-preta: #0f0f0f;
-    
+
+    /* TAMANHO FONTE */
+    --font-gigante: 62px; 
+    --font-grande: 42px;
+    --font-media-grande: 32px;
+    --font-media: 22px;
+    --font-normal: 16px;
+    --font-pequena: 12px;
+
+    /* PESO FONTE */
+    --font-pesada: 800;
 }
+

@@ -24,7 +24,8 @@
 </style>
 
 <section class="apresentacao">
-    <button class="button_apresentacao">Veja apresentação</button>
+    {% include 'components/button.html' with class_button="button button_apresentacao" id_button="presentation-button" texto_button="Veja apresentação" %}
+
     <div id="video_container">
         <iframe id="video_apresentacao" width="720" height="415" src="https://www.youtube.com/embed/g1Flr67phOA?si=rM3-Xz1D_9kAje9W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
