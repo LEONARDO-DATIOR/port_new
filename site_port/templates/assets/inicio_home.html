@@ -2,33 +2,51 @@
     .home_inicio {
         display: flex;
         background: var(--cor-branca);
-        justify-content: space-around;
-        width: 80%;
-        height: 250px;
+        justify-content: center;
+        align-items: center;
+        gap: 5em;
         margin: 4em auto;
-        border: 2px solid var(--cor-destaque-primaria);
-        border-radius: 16px;
-        box-shadow: 4px 10px 30px rgba(0, 0, 0, 0.452);
+    }
+
+    .home-div_img {
+        background: var(--cor-branca);
+        padding: 1em;
+        border: 1px solid var(--cor-destaque-primaria);
+        border-radius: 18px;
+        box-shadow: 4px 4px 8px rgb(0, 0, 0, 0.25);
     }
 
     .home-div_text {
         display: flex;
         flex-direction: column;
-        padding-top: 4em;
-        height: 100%;
-        text-align: center;
+        align-items: center;
+        word-wrap: break-word;
+        width: 50%;
     }
 
     .home-div_text h1 {
-        font-family: "New Amsterdam", sans-serif;
-        font-size: 62px;
-        text-align: left;
+        font-size: 40px;
+        font-weight: bold;
+        text-shadow: 4px 4px 4px var(--cor-sombra);
+    }
+
+    .home-div_text span {
+        color: rgba(0, 0, 0, 0.56);
+    }
+
+    .home-div_text p {
+        margin-top: 4em;
+        width: 100%;
     }
 </style>
 
 <section class="home_inicio">
+    <div class="home-div_img">
+        <img src="../../static/imgs/foto_perfil.png" alt="">
+    </div>
     <div class="home-div_text">
-        <h1>Leonardo Weder Veiga Duca</h1>
-        <p>Desenvolvedor full-stack</p>
+        <h1>LEONARDO WEDER VEIGA DUCA</h1>
+        <span>Desenvolvedor full-stack</span>
+        <p>TESTETETETETETETETETEETETETETETETEETETETETETEETETTETETETEETETETESADJASIODJASOIDASJODIASODISAODSA9ODAJS0DJW08FEQ0FE0FJE0FJW0FJE0W JWE0F J0WEJF 0EWFJWE0 JWE0FJWE0FJ W0EJ F0EW</p>
     </div>
 </section>

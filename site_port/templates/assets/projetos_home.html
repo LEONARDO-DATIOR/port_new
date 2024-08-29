@@ -4,29 +4,42 @@
         flex-direction: column;
         padding: 6em 0;
         background: var(--cor-branca);
+        padding: 0 auto;
     }
 
     .projeto_principal {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 60%;
+        height: 280px;
+        margin-left: 8em;
+        border: 2px solid var(--cor-destaque-primaria);
+        border-radius: 16px;
+        box-shadow: 4px 4px 12px var(--cor-preta);
     }
     .imagem_projeto_principal {
-        width: 28%;
+        width: 35%;
         perspective: 1500px;
+       
     }
     
     .imagem_projeto_principal img {
-        width: 100%;
+        width: 90%;
         border-radius: 24px;
+        transform: rotateY(+20deg); /* Inclina a div para criar o efeito de profundidade */
+        transform-origin: left; /* Define o ponto de origem da transformação para o lado direito */
+        transition: transform 0.3s ease; 
+        box-shadow: 4px 6px 12px var(--cor-preta);
     }
 
     .textos_projeto_principal {
-        width: 40%;
+        width: 50%;
     }
 
     #projeto_principal2 {
         flex-direction: row-reverse;
-        margin-top: 14em;
+        margin: 10em 8em 0 auto;
     }
 
 </style>
